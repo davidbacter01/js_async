@@ -21,3 +21,30 @@ promise.then((resolvedValue) => {
 })
 
 console.log('Cod ce se executa simultan cu promisiunea');
+
+
+// async await
+
+async function getUsers() {
+    let users = [
+            {username: 'username1', password: 'pass1'},
+            {username: 'username2', password: 'pass2'}
+        ]
+
+    return users;
+}
+
+const users = getUsers();
+
+console.log(users);
+
+users.then((users) => {
+    console.log(users);
+}).catch((e) => console.log(e));
+
+async function doSomethingWithUsers() {
+    let users = await getUsers();
+    console.log('users din await: ', users);
+}
+
+doSomethingWithUsers();
