@@ -48,3 +48,18 @@ async function doSomethingWithUsers() {
 }
 
 doSomethingWithUsers();
+
+
+// try/catch 
+
+try {
+    const labels = ['label1'];
+    // saySomething('asdsa');
+    console.log(`First label is ${labels[0]}`);
+} catch (err) {
+    console.log('An error has occured: ', err);
+} finally {
+    console.log('Finally has executed');
+}
+
+console.log('After try/catch');
